@@ -14,18 +14,11 @@ class ShopController extends Controller
     public function index(Request $request)
     {
 
-        $response = Http::get("https://dummyjson.com/products")['products'];
-        $search = request('search');
-       
-        $responsesearch = Http::get("https://dummyjson.com/products/search?q={$search}")['products'];
-            
-    
-        
+        $response = Http::get("https://dummyjson.com/products")['products'];       
         return view("Pages.homepages",[
             "judul"=> "Ol-Shop",
-            "kontent" =>"Toko",
+            "kontent" =>"Toko Reza",
             "result" =>$response,
-            "hasil" => $responsesearch
             ]);
     }
    
