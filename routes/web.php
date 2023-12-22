@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//Route::resource('Pages', ShopController::class);
+
+
 Route::get("/", [ShopController::class,"index"]);
 Route::get("/cari", [ShopController::class,"cari"]);
+Route::get("/show/{id}", [ShopController::class,"show"]);
+
+
 /*
 Route::resource("/",ShopController::class);
 */

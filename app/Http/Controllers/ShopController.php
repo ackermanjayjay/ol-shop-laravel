@@ -49,15 +49,20 @@ class ShopController extends Controller
             "judul"=> "Ol-Shop",
             "kontent" =>"Toko",
             'result'=>$responsesearch]);
+            
+        }
         
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+        /**
+        * Display the specified resource.
+        */
+        public function show(string $id)
+        {
+            $responsesearch = Http::get("https://dummyjson.com/products/{$id}");
+            return view('Pages.products',[
+                "judul"=> "Ol-Shop",
+                "kontent" =>"Toko",
+                'result'=>$responsesearch]);
+            
     }
 
     /**

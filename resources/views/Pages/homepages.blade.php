@@ -29,7 +29,7 @@
                       <p class="card-text">{{$item['description']}}</p>
                       <p class="text-primary">${{$item['price']}}</p>
                       <p class="text-black">Category: {{$item['category']}}</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <a href="/show/{{$item['id']}}" class="btn btn-primary">Details</a>
                     </div>
                   </div>
             </div>
